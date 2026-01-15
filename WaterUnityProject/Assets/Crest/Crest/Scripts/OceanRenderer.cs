@@ -41,6 +41,7 @@ namespace Crest
         [Tooltip("Base wind speed in km/h. Controls wave conditions. Can be overridden on ShapeGerstner components."), Range(0, 150f, power: 2f)]
         [Predicated(nameof(_globalWindZone), inverted: true, null)]
         public float _globalWindSpeed = 150f;
+
         public float WindSpeedKPH => _globalWindZone != null ? _globalWindZone.windMain * 3.6f : _globalWindSpeed;
 
         [Tooltip("Base wind direction. Controls wave conditions. Can be overriden on Shape components.")]
